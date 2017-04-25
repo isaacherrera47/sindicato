@@ -41,4 +41,12 @@ class Resource
         return isset($this->resources['carousel']) ? $this->resources['carousel'] : null;
     }
 
+    /**
+     * @param string $key Name of social link to show
+     * @return string Empty if it was not found.
+     */
+    public function getSocialLink($key) {
+        return isset($this->resources['social_links'][$key]) ? $this->resources['social_links'][$key] : '';
+    }
+
 }

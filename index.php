@@ -60,12 +60,10 @@ require_once 'includes/header.inc.php';
         <div class="social">
             <div class="wrapper">
                 <ul class="list-unstyled">
-                    <li><a href="#" title="facebook" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="#" title="twitter" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="#" title="pinterest" target="_blank"><i class="fa fa-pinterest"></i></a></li>
-                    <li><a href="#" title="instagram" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                    <li><a href="<?= $site->getSocialLink('facebook') ?>" title="facebook" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="<?= $site->getSocialLink('twitter') ?>" title="twitter" target="_blank"><i class="fa fa-twitter"></i></a></li>
                 </ul>
-                <span>Follow us on</span>
+                <span>Síguenos en</span>
             </div>
         </div>
     </div><!-- End slider-wrapper -->
