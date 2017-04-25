@@ -94,7 +94,7 @@ $(document).ready(function () {
     // Scroll to top button
     // ---------------------------------------------- //
     $('#scrollTop').click(function () {
-        $('html, body').animate({ scrollTop: 0 }, 1000);
+        $('html, body').animate({scrollTop: 0}, 1000);
     });
 
     $(window).scroll(function () {
@@ -108,6 +108,7 @@ $(document).ready(function () {
     // ---------------------------------------------- //
     // Reservation Modal Opening & Closing
     // ---------------------------------------------- //
+    //TODO change id of modal
     $('#open-reservation').click(function (e) {
         e.preventDefault();
         $('.reservation-overlay').fadeIn();
@@ -183,9 +184,9 @@ $(document).ready(function () {
     // ---------------------------------------------- //
     var Page = (function () {
         var $navArrows = $('#nav-arrows'),
-            $nav       = $('#nav-dots > span'),
+            $nav = $('#nav-dots > span'),
             slitslider = $('#slider').slitslider({
-                onBeforeChange : function (slide, pos) {
+                onBeforeChange: function (slide, pos) {
                     $nav.removeClass('nav-dot-current');
                     $nav.eq(pos).addClass('nav-dot-current');
                 }
@@ -215,7 +216,7 @@ $(document).ready(function () {
                     });
                 });
             };
-        return { init : init };
+        return {init: init};
     })();
     Page.init();
 
