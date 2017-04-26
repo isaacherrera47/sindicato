@@ -104,18 +104,18 @@ require_once 'includes/header.inc.php';
             <div class="row">
                 <div class="col-sm-6">
                     <div class="heading text-center">
-                        <p>Call Us Now For</p>
-                        <h5>Home Delivery</h5>
+                        <p><?= $site->getText('permisos_banner_title')?></p>
+                        <h5><?= $site->getText('permisos_banner_title2') ?></h5>
                     </div>
-                    <a href="tel:9870988764" class="phone">987 098 8764</a>
+                    <?= $site->getText('permisos_banner_description') ?>
                 </div>
 
                 <div class="col-sm-6">
                     <div class="heading text-center">
-                        <p>Check Our Clients'</p>
-                        <h5>Rating &amp; Reviews</h5>
+                        <p><?= $site->getText('editorial_banner_title') ?></p>
+                        <h5><?= $site->getText('editorial_banner_description') ?></h5>
                     </div>
-                    <a href="#" class="reviews btn-unique"><i class="fa fa-angle-right"></i></a>
+                    <a href="<?= $site->getPath()?>sutitspr/" class="reviews btn-unique"><i class="fa fa-angle-right"></i></a>
                 </div>
             </div>
         </div>
@@ -127,14 +127,10 @@ require_once 'includes/header.inc.php';
     <section id="about" class="about">
         <div class="container text-center">
             <header>
-                <h2>About Restaurant</h2>
-                <h3>Check our story</h3>
+                <h2><?= $site->getText('about_title')?></h2>
+                <h3><?= $site->getText('about_subtitle')?></h3>
             </header>
-            <p class="lead">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-                laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae
-                vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
-                sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est,
-                qui dolorem ipsum quia dolor sit amet, consectetur</p>
+            <p class="lead"><?= $site->getText('about_text')?></p>
         </div>
     </section>
     <!-- End About Section -->
@@ -144,44 +140,30 @@ require_once 'includes/header.inc.php';
     <section id="services" class="services">
         <div class="container text-center">
             <header>
-                <h2>We provide the following</h2>
-                <h3>Our Specialities</h3>
+                <h2><?= $site->getText('mvsection_title')?></h2>
+                <h3><?= $site->getText('mvsection_subtitle')?></h3>
             </header>
 
             <div class="row">
                 <!-- item -->
-                <div class="col-sm-4 service">
+                <div class="col-sm-6 service">
                     <div class="icon">
                         <i class="icon-like"></i>
                     </div>
                     <div class="text">
-                        <h4>Clean Environment</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam,</p>
+                        <h4>Misión</h4>
+                        <p><?= $site->getText('mvsection_mision')?></p>
                     </div>
                 </div>
 
                 <!-- item -->
-                <div class="col-sm-4 service">
+                <div class="col-sm-6 service">
                     <div class="icon">
                         <i class="icon-hat"></i>
                     </div>
                     <div class="text">
-                        <h4>Lovely &amp; expert chefs</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam,</p>
-                    </div>
-                </div>
-
-                <!-- item -->
-                <div class="col-sm-4 service">
-                    <div class="icon">
-                        <i class="icon-plate"></i>
-                    </div>
-                    <div class="text">
-                        <h4>Fresh and tasty food</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam,</p>
+                        <h4>Visión</h4>
+                        <p><?= $site->getText('mvsection_vision')?></p>
                     </div>
                 </div>
             </div>

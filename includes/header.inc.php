@@ -20,7 +20,7 @@ $site = new Resource();
     <!-- Page Title -->
     <title><?= $site->getText('title') ?></title>
     <!-- Favicon -->
-    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="shortcut icon" href="<?= $site->getPath() ?>img/favicon.ico">
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="<?= $site->getPath() ?>css/bootstrap.min.css">
