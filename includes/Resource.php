@@ -9,11 +9,13 @@
 class Resource
 {
     private $resources;
+    private $path;
 
     function __construct()
     {
         // initialize array of texts and images.
         $this->resources = parse_ini_file("texts.ini", true);
+        $this->path = $_SERVER['PHP_SELF'];
     }
 
     /**
@@ -32,6 +34,27 @@ class Resource
     public function getText($key)
     {
         return isset($this->resources[$key]) ? $this->resources[$key] : '';
+    }
+
+    /**
+     * @return string correct title to show.
+     */
+    public function getTitle()
+    {
+        if (strpos($this->path, 'sutitspr') !== false) {
+            return $this->resources['title_editorial'];
+        } else {
+            return $this->resources['title_sindicato'];
+        }
+    }
+
+    public function getMeta() {
+        $path = $_SERVER['PHP_SELF'];
+        if (strpos($this->path, 'sutitspr') !== false) {
+            return $this->resources['meta_description_editorial'];
+        } else {
+            return $this->resources['meta_description_sindicato'];
+        }
     }
 
     /**
@@ -57,7 +80,11 @@ class Resource
      */
     public function getSocialLink($key)
     {
-        return isset($this->resources['social_links'][$key]) ? $this->resources['social_links'][$key] : '';
+        if (strpos($this->path, 'sutitspr') !== false){
+            return isset($this->resources['social_links']['editorial'][$key]) ? $this->resources['social_links']['editorial'][$key] : '';
+        } else {
+            return isset($this->resources['social_links']['sindicato'][$key]) ? $this->resources['social_links']['sindicato'][$key] : '';
+        }
     }
 
 }

@@ -15,10 +15,10 @@ $site = new Resource();
     <!-- IE Compatibility meta -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- Description meta -->
-    <meta name="description" content="<?= $site->getText('meta_description') ?>">
+    <meta name="description" content="<?= $site->getMeta()?>">
 
     <!-- Page Title -->
-    <title><?= $site->getText('title') ?></title>
+    <title><?= $site->getTitle() ?></title>
     <!-- Favicon -->
     <link rel="shortcut icon" href="<?= $site->getPath() ?>img/favicon.ico">
 
