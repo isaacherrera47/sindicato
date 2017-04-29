@@ -49,29 +49,11 @@ class Resource
     }
 
     public function getMeta() {
-        $path = $_SERVER['PHP_SELF'];
         if (strpos($this->path, 'sutitspr') !== false) {
             return $this->resources['meta_description_editorial'];
         } else {
             return $this->resources['meta_description_sindicato'];
         }
-    }
-
-    /**
-     * @return array Array of all carousel images, null if did not be declared.
-     */
-    public function getCarouselImages()
-    {
-        return isset($this->resources['carousel']) ? $this->resources['carousel'] : null;
-    }
-
-    /**
-     * @param string $key Name of image declared on texts.ini
-     * @return array Array if was found the image, null if wasn't.
-     */
-    public function getCarouselImage($key)
-    {
-        return isset($this->resources['carousel']) ? $this->resources['carousel'] : null;
     }
 
     /**

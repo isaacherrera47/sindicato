@@ -18,7 +18,7 @@ require_once '../includes/header.inc.php'
                 <ul class="nav navbar-nav">
                     <li><a href="#about">Acerca de</a></li>
                     <li><a href="#articles">Artículos</a></li>
-                    <li><a href="#announcement">Convocatoria</a></li>
+                    <li><a href="#gallery">Galería</a></li>
                     <li><a href="#contact">Contacto</a></li>
                     <li><a href="<?= $site->getPath() ?>docs/template.docx" target="_blank">Plantilla</a></li>
                 </ul>
@@ -59,6 +59,94 @@ require_once '../includes/header.inc.php'
     </div>
 </section>
 <!-- End Articles Section -->
+
+<!-- Gallery Section -->
+<section id="gallery" class="gallery">
+    <div class="container text-center">
+        <header>
+            <h2><?= $site->getText('editorial_gallery_title') ?></h2>
+            <h3><?= $site->getText('editorial_gallery_subtitle') ?></h3>
+        </header>
+
+        <div class="gellery">
+            <div class="row">
+                <!-- Item -->
+                <div class="col-md-3 col-sm-4 col-xs-6 col-xs-6 col-custom-12">
+                    <div class="item">
+                        <img src="img/bg01-small.jpg" alt="image">
+                        <a href="img/bg01.jpg" data-lightbox="image-1" data-title="Image Caption" class="has-border">
+                            <span class="icon-search"></span>
+                        </a>
+                    </div>
+                </div>
+                <!-- Item -->
+                <div class="col-md-3 col-sm-4 col-xs-6 col-custom-12">
+                    <div class="item">
+                        <img src="img/bg02-small.jpg" alt="image">
+                        <a href="img/bg02.jpg" data-lightbox="image-1" data-title="Image Caption" class="has-border">
+                            <span class="icon-search"></span>
+                        </a>
+                    </div>
+                </div>
+                <!-- Item -->
+                <div class="col-md-3 col-sm-4 col-xs-6 col-custom-12">
+                    <div class="item">
+                        <img src="img/bg03-small.jpg" alt="image">
+                        <a href="img/bg03.jpg" data-lightbox="image-1" data-title="Image Caption" class="has-border">
+                            <span class="icon-search"></span>
+                        </a>
+                    </div>
+                </div>
+                <!-- Item -->
+                <div class="col-md-3 col-sm-4 col-xs-6 col-custom-12">
+                    <div class="item">
+                        <img src="img/bg-small.jpg" alt="image">
+                        <a href="img/bg.jpg" data-lightbox="image-1" data-title="Image Caption" class="has-border">
+                            <span class="icon-search"></span>
+                        </a>
+                    </div>
+                </div>
+                <!-- Item -->
+                <div class="col-md-3 col-sm-4 col-xs-6 col-custom-12">
+                    <div class="item">
+                        <img src="img/bg05-small.jpg" alt="image">
+                        <a href="img/bg05.jpg" data-lightbox="image-1" data-title="Image Caption" class="has-border">
+                            <span class="icon-search"></span>
+                        </a>
+                    </div>
+                </div>
+                <!-- Item -->
+                <div class="col-md-3 col-sm-4 col-xs-6 col-custom-12">
+                    <div class="item">
+                        <img src="img/bg06-small.jpg" alt="image">
+                        <a href="img/bg06.jpg" data-lightbox="image-1" data-title="Image Caption" class="has-border">
+                            <span class="icon-search"></span>
+                        </a>
+                    </div>
+                </div>
+                <!-- Item -->
+                <div class="col-md-3 col-sm-4 col-xs-6 col-custom-12">
+                    <div class="item">
+                        <img src="img/bg04-small.jpg" alt="image">
+                        <a href="img/bg04.jpg" data-lightbox="image-1" data-title="Image Caption" class="has-border">
+                            <span class="icon-search"></span>
+                        </a>
+                    </div>
+                </div>
+                <!-- Item -->
+                <div class="col-md-3 col-sm-4 col-xs-6 col-custom-12">
+                    <div class="item">
+                        <img src="img/bg07-small.jpg" alt="image">
+                        <a href="img/bg07.jpg" data-lightbox="image-1" data-title="Image Caption" class="has-border">
+                            <span class="icon-search"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Gallery Section -->
 
 <!-- Footer -->
 <footer id="contact" class="mainFooter">
