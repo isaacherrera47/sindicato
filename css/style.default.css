@@ -182,7 +182,7 @@ header {
 section {
     position: relative;
     padding-top: 150px;
-    padding-bottom: 150px;
+    padding-bottom: 50px;
 }
 
 section.section--no-padding {
@@ -458,7 +458,7 @@ section.gallery .item a,
 footer ul.contact a,
 footer ul.contact li,
 #scrollTop,
-.reservation-overlay #close {
+.iframe-overlay #close {
     -webkit-transition: all 0.4s;
     transition: all 0.4s;
 }
@@ -883,22 +883,6 @@ section.about {
     position: relative;
 }
 
-/*section.about::before {*/
-    /*content: '';*/
-    /*display: block;*/
-    /*background-position: center center;*/
-    /*background: url(../img/dish-d.png) no-repeat;*/
-    /*background-size: 100%;*/
-    /*position: absolute;*/
-    /*max-width: 300px;*/
-    /*height: 250px;*/
-    /*width: 30vw;*/
-    /*bottom: -150px;*/
-    /*right: -10vw;*/
-/*}*/
-/*
-// TODO delete unused styles
- */
 /* ==========================================
    Services Section
    ========================================== */
@@ -1554,9 +1538,9 @@ footer .copyrights p a:hover {
 }
 
 /* ==========================================
-   RESERVATION POP UP
+   iframe POP UP
    ========================================== */
-.reservation-overlay {
+.iframe-overlay {
     background: rgba(0, 0, 0, 0.8);
     width: 100%;
     height: 100%;
@@ -1568,11 +1552,11 @@ footer .copyrights p a:hover {
     display: none;
 }
 
-.reservation-overlay .container {
+.iframe-overlay .container {
     width: 100% !important;
 }
 
-.reservation-overlay .reservation-modal {
+.iframe-overlay .iframe-modal {
     max-width: 800px;
     min-width: 700px;
     padding: 50px 0;
@@ -1588,17 +1572,17 @@ footer .copyrights p a:hover {
     transition: all 0.7s;
 }
 
-.reservation-overlay .reservation-modal.is-visible {
+.iframe-overlay .iframe-modal.is-visible {
     top: 100px;
     opacity: 1;
 }
 
-.reservation-overlay form {
+.iframe-overlay form {
     margin-top: 40px;
     font-size: 12px !important;
 }
 
-.reservation-overlay #close {
+.iframe-overlay #close {
     width: 40px;
     height: 40px;
     line-height: 45px;
@@ -1613,7 +1597,7 @@ footer .copyrights p a:hover {
     cursor: pointer;
 }
 
-.reservation-overlay #close:hover {
+.iframe-overlay #close:hover {
     background: #111111;
 }
 
@@ -2693,4 +2677,6 @@ a.list-group-item.active > .badge,
 
 iframe {
     border: none;
+    width: 100%;
+    height: 400px;
 }

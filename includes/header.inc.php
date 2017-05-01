@@ -2,8 +2,6 @@
 require_once 'functions.inc.php';
 require_once 'Resource.php';
 
-
-init();
 $site = new Resource();
 ?>
 <!DOCTYPE html>

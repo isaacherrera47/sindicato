@@ -1,5 +1,6 @@
 <?php
-require_once '../includes/header.inc.php'
+require_once '../includes/header.inc.php';
+$docs = loadDocsLinks();
 ?>
 
 <!-- Navbar -->
@@ -40,20 +41,37 @@ require_once '../includes/header.inc.php'
 </section>
 <!-- End About Section -->
 
-<!-- Articles Section iframes sucks!!!  -->
-<section id="articles" class="articles">
-    <div class="container text-center">
-        <header>
-            <h2><?= $site->getText('editorial_articles_title')?></h2>
-            <h3><?= $site->getText('editorial_articles_subtitle')?></h3>
+<!-- Articles Section -->
+<section id="articles" class="menu">
+    <div class="container">
+        <header class="text-center">
+            <h2><?= $site->getText('editorial_articles_title') ?></h2>
+            <h3><?= $site->getText('editorial_articles_subtitle') ?></h3>
         </header>
 
-        <div class="row">
-            <div class="col-md-6">
-                <iframe class="center-block" style="width: 80%; height: 200px;" src="https://docs.google.com/document/d/1FBUqam8kSrafiPAl7JQRwxiQoUrIEtQp1IgqL-5cI7M/pub?embedded=true"></iframe>
-            </div>
-            <div class="col-md-6">
-                <iframe class="center-block" style="width: 80%; height: 200px;" src="https://docs.google.com/document/d/1qWMg_6jUGe75sTpgsVGggRUctkdOcFxmibeyoNPGK_k/pub?embedded=true"></iframe></iframe>
+        <div class="articles">
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active">
+                    <div class="row">
+                        <?php foreach ($docs as $doc): ?>
+                        <!-- item -->
+                        <div class="col-sm-12">
+                            <div class="menu-item <?= $doc['optional'] ?> has-border clearfix">
+                                <div class="item-details pull-left">
+                                    <h5><?= $doc['title'] ?></h5>
+                                    <p><?= $doc['subtitle'] ?></p>
+                                </div>
+                                <div class="item-price pull-right">
+                                    <a href="#" data-url="<?= $doc['url'] ?>" class="btn btn-unique open-iframe">
+                                        Previsualizar
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <?php endforeach; ?>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -73,8 +91,8 @@ require_once '../includes/header.inc.php'
                 <!-- Item -->
                 <div class="col-md-3 col-sm-4 col-xs-6 col-xs-6 col-custom-12">
                     <div class="item">
-                        <img src="img/bg01-small.jpg" alt="image">
-                        <a href="img/bg01.jpg" data-lightbox="image-1" data-title="Image Caption" class="has-border">
+                        <img src="<?= $site->getPath() ?>img/1.jpg" alt="image">
+                        <a href="<?= $site->getPath() ?>img/1.jpg" data-lightbox="image-1" data-title="Image Caption" class="has-border">
                             <span class="icon-search"></span>
                         </a>
                     </div>
@@ -82,8 +100,8 @@ require_once '../includes/header.inc.php'
                 <!-- Item -->
                 <div class="col-md-3 col-sm-4 col-xs-6 col-custom-12">
                     <div class="item">
-                        <img src="img/bg02-small.jpg" alt="image">
-                        <a href="img/bg02.jpg" data-lightbox="image-1" data-title="Image Caption" class="has-border">
+                        <img src="<?= $site->getPath() ?>img/2.jpg" alt="image">
+                        <a href="<?= $site->getPath() ?>img/2.jpg" data-lightbox="image-1" data-title="Image Caption" class="has-border">
                             <span class="icon-search"></span>
                         </a>
                     </div>
@@ -91,8 +109,8 @@ require_once '../includes/header.inc.php'
                 <!-- Item -->
                 <div class="col-md-3 col-sm-4 col-xs-6 col-custom-12">
                     <div class="item">
-                        <img src="img/bg03-small.jpg" alt="image">
-                        <a href="img/bg03.jpg" data-lightbox="image-1" data-title="Image Caption" class="has-border">
+                        <img src="<?= $site->getPath() ?>img/3.jpg" alt="image">
+                        <a href="<?= $site->getPath() ?>img/3.jpg" data-lightbox="image-1" data-title="Image Caption" class="has-border">
                             <span class="icon-search"></span>
                         </a>
                     </div>
@@ -100,8 +118,8 @@ require_once '../includes/header.inc.php'
                 <!-- Item -->
                 <div class="col-md-3 col-sm-4 col-xs-6 col-custom-12">
                     <div class="item">
-                        <img src="img/bg-small.jpg" alt="image">
-                        <a href="img/bg.jpg" data-lightbox="image-1" data-title="Image Caption" class="has-border">
+                        <img src="<?= $site->getPath() ?>img/2.jpg" alt="image">
+                        <a href="<?= $site->getPath() ?>img/2.jpg" data-lightbox="image-1" data-title="Image Caption" class="has-border">
                             <span class="icon-search"></span>
                         </a>
                     </div>
@@ -109,8 +127,8 @@ require_once '../includes/header.inc.php'
                 <!-- Item -->
                 <div class="col-md-3 col-sm-4 col-xs-6 col-custom-12">
                     <div class="item">
-                        <img src="img/bg05-small.jpg" alt="image">
-                        <a href="img/bg05.jpg" data-lightbox="image-1" data-title="Image Caption" class="has-border">
+                        <img src="<?= $site->getPath() ?>img/1.jpg" alt="image">
+                        <a href="<?= $site->getPath() ?>img/1.jpg" data-lightbox="image-1" data-title="Image Caption" class="has-border">
                             <span class="icon-search"></span>
                         </a>
                     </div>
@@ -118,8 +136,8 @@ require_once '../includes/header.inc.php'
                 <!-- Item -->
                 <div class="col-md-3 col-sm-4 col-xs-6 col-custom-12">
                     <div class="item">
-                        <img src="img/bg06-small.jpg" alt="image">
-                        <a href="img/bg06.jpg" data-lightbox="image-1" data-title="Image Caption" class="has-border">
+                        <img src="<?= $site->getPath() ?>img/3.jpg" alt="image">
+                        <a href="<?= $site->getPath() ?>img/3.jpg" data-lightbox="image-1" data-title="Image Caption" class="has-border">
                             <span class="icon-search"></span>
                         </a>
                     </div>
@@ -127,8 +145,8 @@ require_once '../includes/header.inc.php'
                 <!-- Item -->
                 <div class="col-md-3 col-sm-4 col-xs-6 col-custom-12">
                     <div class="item">
-                        <img src="img/bg04-small.jpg" alt="image">
-                        <a href="img/bg04.jpg" data-lightbox="image-1" data-title="Image Caption" class="has-border">
+                        <img src="<?= $site->getPath() ?>img/2.jpg" alt="image">
+                        <a href="<?= $site->getPath() ?>img/2.jpg" data-lightbox="image-1" data-title="Image Caption" class="has-border">
                             <span class="icon-search"></span>
                         </a>
                     </div>
@@ -136,8 +154,8 @@ require_once '../includes/header.inc.php'
                 <!-- Item -->
                 <div class="col-md-3 col-sm-4 col-xs-6 col-custom-12">
                     <div class="item">
-                        <img src="img/bg07-small.jpg" alt="image">
-                        <a href="img/bg07.jpg" data-lightbox="image-1" data-title="Image Caption" class="has-border">
+                        <img src="<?= $site->getPath() ?>img/1.jpg" alt="image">
+                        <a href="<?= $site->getPath() ?>img/1.jpg" data-lightbox="image-1" data-title="Image Caption" class="has-border">
                             <span class="icon-search"></span>
                         </a>
                     </div>
@@ -179,6 +197,22 @@ require_once '../includes/header.inc.php'
     </div>
 </footer>
 <!-- End Footer -->
+
+<!-- moadal iframe -->
+<div class="iframe-overlay">
+    <section id="iframe-modal" class="iframe-modal">
+        <div id="close"><i class="icon-close"></i></div>
+
+        <div class="container">
+            <div class="row">
+                <div class="form-holder col-md-12 text-center">
+                    <h3>Previsualización del documento</h3>
+                    <iframe id="placed_iframe" name="placed_iframe"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+</div><!-- end iframe modal -->
 
 <?php
 require_once '../includes/footer.inc.php'

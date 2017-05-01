@@ -7,7 +7,7 @@
  */
 
 
-function init()
+function loadDocsLinks()
 {
-
+    return parse_ini_file("docs_links.ini", true);
 }

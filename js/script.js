@@ -106,25 +106,28 @@ $(document).ready(function () {
     });
 
     // ---------------------------------------------- //
-    // Reservation Modal Opening & Closing
+    // iframe Modal Opening & Closing
     // ---------------------------------------------- //
     //TODO change id of modal
-    $('#open-reservation').click(function (e) {
+    $('.open-iframe').click(function (e) {
         e.preventDefault();
-        $('.reservation-overlay').fadeIn();
+        var url_iframe = $(this).data('url');
+        $('#placed_iframe').attr('src', url_iframe);
+        $('.iframe-overlay').fadeIn();
         $('body').css({'overflow': 'hidden'});
 
         setTimeout(function () {
-            $('#reservation-modal').addClass('is-visible');
+            $('#iframe-modal').addClass('is-visible');
         }, 100);
+
     });
 
     $('#close').click(function () {
-        $('.reservation-overlay').fadeOut();
+        $('.iframe-overlay').fadeOut();
         setTimeout(function () {
             $('body').css('overflow', 'auto');
         }, 400);
-        $('#reservation-modal').removeClass('is-visible');
+        $('#iframe-modal').removeClass('is-visible');
     });
 
 
@@ -135,48 +138,6 @@ $(document).ready(function () {
         'resizeDuration': 400,
         'fadeDuration': 400,
         'alwaysShowNavOnTouchDevices': true
-    });
-
-    // ---------------------------------------------- //
-    // Booking form validation
-    // ---------------------------------------------- //
-    $('#booking-form, #booking-form-alternative').validate({
-        messages: {
-            name: 'please enter your name',
-            email: 'please enter your email address',
-            number: 'please enter your phone number',
-            people: 'please enter how many people',
-            date: 'please enter booking date',
-            time: 'please enter booking time',
-            request: 'please enter your special request'
-        }
-    });
-
-    // ---------------------------------------------- //
-    // Modal booking form validation
-    // ---------------------------------------------- //
-    $('#booking-form-alternative').validate({
-        messages: {
-            clientname: 'please enter your name',
-            clientemail: 'please enter your email address',
-            clientnumber: 'please enter your phone number',
-            clientpeople: 'please enter how many people',
-            clientdate: 'please enter booking date',
-            clienttime: 'please enter booking time',
-            clientrequest: 'please enter your special request'
-        }
-    });
-
-
-    // ---------------------------------------------- //
-    // Contact form validation
-    // ---------------------------------------------- //
-    $('#contact-form').validate({
-        messages: {
-            username: 'please enter your name',
-            useremail: 'please enter your email address',
-            message: 'please enter your message'
-        }
     });
 
     // ---------------------------------------------- //
