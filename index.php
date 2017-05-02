@@ -18,6 +18,7 @@ require_once 'includes/header.inc.php';
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="#top">Inicio</a></li>
                         <li><a href="#about">Acerca de</a></li>
+                        <li><a href="#gallery">Galeria</a></li>
                         <li><a href="#contact">Contacto</a></li>
                         <li><a href="http://www.sutitspr.com.mx/permisos/" target="_blank">Permisos</a></li>
                     </ul>
@@ -66,11 +67,37 @@ require_once 'includes/header.inc.php';
                         </div>
                     </div>
                 </div>
+                <!-- slide -->
+                <div class="sl-slide bg-3" data-orientation="horizontal" data-slice1-rotation="3"
+                     data-slice2-rotation="3" data-slice1-scale="2" data-slice2-scale="1">
+                    <div class="sl-slide-inner" style="background-image: url(img/1.jpg);">
+                        <div class="container">
+                            <h2>Visit <span class="text-primary">Lorem ipsum</span></h2>
+                            <h1>lorem ipsum dolor sit amit</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- slide -->
+                <div class="sl-slide bg-3" data-orientation="horizontal" data-slice1-rotation="3"
+                     data-slice2-rotation="3" data-slice1-scale="2" data-slice2-scale="1">
+                    <div class="sl-slide-inner" style="background-image: url(img/2.jpg);">
+                        <div class="container">
+                            <h2>Visit <span class="text-primary">Lorem ipsum</span></h2>
+                            <h1>lorem ipsum dolor sit amit</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt.</p>
+                        </div>
+                    </div>
+                </div>
             </div><!-- End sl-slider -->
 
             <!-- slider pagination -->
             <nav id="nav-dots" class="nav-dots">
                 <span class="nav-dot-current"></span>
+                <span></span>
+                <span></span>
                 <span></span>
                 <span></span>
             </nav>
@@ -168,6 +195,95 @@ require_once 'includes/header.inc.php';
         </div>
     </section>
     <!-- End Services Section -->
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container text-center">
+            <header>
+                <h2><?= $site->getText('editorial_gallery_title') ?></h2>
+                <h3><?= $site->getText('editorial_gallery_subtitle') ?></h3>
+            </header>
+
+            <div class="gellery">
+                <div class="row">
+                    <!-- Item -->
+                    <div class="col-md-3 col-sm-4 col-xs-6 col-xs-6 col-custom-12">
+                        <div class="item">
+                            <img src="<?= $site->getPath() ?>img/1.jpg" alt="image">
+                            <a href="<?= $site->getPath() ?>img/1.jpg" data-lightbox="image-1" data-title="Image Caption" class="has-border">
+                                <span class="icon-search"></span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Item -->
+                    <div class="col-md-3 col-sm-4 col-xs-6 col-custom-12">
+                        <div class="item">
+                            <img src="<?= $site->getPath() ?>img/2.jpg" alt="image">
+                            <a href="<?= $site->getPath() ?>img/2.jpg" data-lightbox="image-1" data-title="Image Caption" class="has-border">
+                                <span class="icon-search"></span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Item -->
+                    <div class="col-md-3 col-sm-4 col-xs-6 col-custom-12">
+                        <div class="item">
+                            <img src="<?= $site->getPath() ?>img/3.jpg" alt="image">
+                            <a href="<?= $site->getPath() ?>img/3.jpg" data-lightbox="image-1" data-title="Image Caption" class="has-border">
+                                <span class="icon-search"></span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Item -->
+                    <div class="col-md-3 col-sm-4 col-xs-6 col-custom-12">
+                        <div class="item">
+                            <img src="<?= $site->getPath() ?>img/2.jpg" alt="image">
+                            <a href="<?= $site->getPath() ?>img/2.jpg" data-lightbox="image-1" data-title="Image Caption" class="has-border">
+                                <span class="icon-search"></span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Item -->
+                    <div class="col-md-3 col-sm-4 col-xs-6 col-custom-12">
+                        <div class="item">
+                            <img src="<?= $site->getPath() ?>img/1.jpg" alt="image">
+                            <a href="<?= $site->getPath() ?>img/1.jpg" data-lightbox="image-1" data-title="Image Caption" class="has-border">
+                                <span class="icon-search"></span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Item -->
+                    <div class="col-md-3 col-sm-4 col-xs-6 col-custom-12">
+                        <div class="item">
+                            <img src="<?= $site->getPath() ?>img/3.jpg" alt="image">
+                            <a href="<?= $site->getPath() ?>img/3.jpg" data-lightbox="image-1" data-title="Image Caption" class="has-border">
+                                <span class="icon-search"></span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Item -->
+                    <div class="col-md-3 col-sm-4 col-xs-6 col-custom-12">
+                        <div class="item">
+                            <img src="<?= $site->getPath() ?>img/2.jpg" alt="image">
+                            <a href="<?= $site->getPath() ?>img/2.jpg" data-lightbox="image-1" data-title="Image Caption" class="has-border">
+                                <span class="icon-search"></span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Item -->
+                    <div class="col-md-3 col-sm-4 col-xs-6 col-custom-12">
+                        <div class="item">
+                            <img src="<?= $site->getPath() ?>img/1.jpg" alt="image">
+                            <a href="<?= $site->getPath() ?>img/1.jpg" data-lightbox="image-1" data-title="Image Caption" class="has-border">
+                                <span class="icon-search"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Gallery Section -->
+
 
     <!-- Footer -->
     <footer id="contact" class="mainFooter">

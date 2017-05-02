@@ -8,7 +8,7 @@ $docs = loadDocsLinks();
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
-                <a href="/Sindicato/" class="navbar-brand"><img src="<?= $site->getPath() ?>img/logo_editorial.png"
+                <a href="/Sindicato/sutitspr" class="navbar-brand"><img src="<?= $site->getPath() ?>img/logo_editorial.png"
                                                                 width="100"></a>
                 <div class="navbar-buttons">
                     <button type="button" data-toggle="collapse" data-target=".navbar-collapse"
@@ -19,9 +19,9 @@ $docs = loadDocsLinks();
                 <ul class="nav navbar-nav">
                     <li><a href="#about">Acerca de</a></li>
                     <li><a href="#articles">Artículos</a></li>
-                    <li><a href="#gallery">Galería</a></li>
                     <li><a href="#contact">Contacto</a></li>
-                    <li><a href="<?= $site->getPath() ?>docs/template.docx" target="_blank">Plantilla</a></li>
+                    <li><a href="<?= $site->getPath() ?>docs/template.pdf" target="_blank">Plantilla</a></li>
+                    <li><a href="<?= $site->getPath() ?>docs/convocatoria.pdf" target="_blank">Convocatoria</a></li>
                 </ul>
                 <a href="/sindicato/" class="btn navbar-btn btn-unique hidden-xs">Sindicato</a>
             </div>
@@ -77,94 +77,6 @@ $docs = loadDocsLinks();
     </div>
 </section>
 <!-- End Articles Section -->
-
-<!-- Gallery Section -->
-<section id="gallery" class="gallery">
-    <div class="container text-center">
-        <header>
-            <h2><?= $site->getText('editorial_gallery_title') ?></h2>
-            <h3><?= $site->getText('editorial_gallery_subtitle') ?></h3>
-        </header>
-
-        <div class="gellery">
-            <div class="row">
-                <!-- Item -->
-                <div class="col-md-3 col-sm-4 col-xs-6 col-xs-6 col-custom-12">
-                    <div class="item">
-                        <img src="<?= $site->getPath() ?>img/1.jpg" alt="image">
-                        <a href="<?= $site->getPath() ?>img/1.jpg" data-lightbox="image-1" data-title="Image Caption" class="has-border">
-                            <span class="icon-search"></span>
-                        </a>
-                    </div>
-                </div>
-                <!-- Item -->
-                <div class="col-md-3 col-sm-4 col-xs-6 col-custom-12">
-                    <div class="item">
-                        <img src="<?= $site->getPath() ?>img/2.jpg" alt="image">
-                        <a href="<?= $site->getPath() ?>img/2.jpg" data-lightbox="image-1" data-title="Image Caption" class="has-border">
-                            <span class="icon-search"></span>
-                        </a>
-                    </div>
-                </div>
-                <!-- Item -->
-                <div class="col-md-3 col-sm-4 col-xs-6 col-custom-12">
-                    <div class="item">
-                        <img src="<?= $site->getPath() ?>img/3.jpg" alt="image">
-                        <a href="<?= $site->getPath() ?>img/3.jpg" data-lightbox="image-1" data-title="Image Caption" class="has-border">
-                            <span class="icon-search"></span>
-                        </a>
-                    </div>
-                </div>
-                <!-- Item -->
-                <div class="col-md-3 col-sm-4 col-xs-6 col-custom-12">
-                    <div class="item">
-                        <img src="<?= $site->getPath() ?>img/2.jpg" alt="image">
-                        <a href="<?= $site->getPath() ?>img/2.jpg" data-lightbox="image-1" data-title="Image Caption" class="has-border">
-                            <span class="icon-search"></span>
-                        </a>
-                    </div>
-                </div>
-                <!-- Item -->
-                <div class="col-md-3 col-sm-4 col-xs-6 col-custom-12">
-                    <div class="item">
-                        <img src="<?= $site->getPath() ?>img/1.jpg" alt="image">
-                        <a href="<?= $site->getPath() ?>img/1.jpg" data-lightbox="image-1" data-title="Image Caption" class="has-border">
-                            <span class="icon-search"></span>
-                        </a>
-                    </div>
-                </div>
-                <!-- Item -->
-                <div class="col-md-3 col-sm-4 col-xs-6 col-custom-12">
-                    <div class="item">
-                        <img src="<?= $site->getPath() ?>img/3.jpg" alt="image">
-                        <a href="<?= $site->getPath() ?>img/3.jpg" data-lightbox="image-1" data-title="Image Caption" class="has-border">
-                            <span class="icon-search"></span>
-                        </a>
-                    </div>
-                </div>
-                <!-- Item -->
-                <div class="col-md-3 col-sm-4 col-xs-6 col-custom-12">
-                    <div class="item">
-                        <img src="<?= $site->getPath() ?>img/2.jpg" alt="image">
-                        <a href="<?= $site->getPath() ?>img/2.jpg" data-lightbox="image-1" data-title="Image Caption" class="has-border">
-                            <span class="icon-search"></span>
-                        </a>
-                    </div>
-                </div>
-                <!-- Item -->
-                <div class="col-md-3 col-sm-4 col-xs-6 col-custom-12">
-                    <div class="item">
-                        <img src="<?= $site->getPath() ?>img/1.jpg" alt="image">
-                        <a href="<?= $site->getPath() ?>img/1.jpg" data-lightbox="image-1" data-title="Image Caption" class="has-border">
-                            <span class="icon-search"></span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- End Gallery Section -->
 
 <!-- Footer -->
 <footer id="contact" class="mainFooter">
